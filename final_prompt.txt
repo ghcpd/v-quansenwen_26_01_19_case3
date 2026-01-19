@@ -1,0 +1,184 @@
+### Role
+
+You are a **senior front-end engineer** specializing in React + TypeScript and modern UI engineering.
+
+---
+
+### Task
+
+Create a **complete front-end project from scratch** for a **Music Playlist Builder** web app (MVP).
+The app lets users browse a mock music library, create playlists, add/remove tracks, reorder tracks, and play previews (simulated).
+
+This task evaluates your ability to build a clean, runnable, well-structured front-end project from **0 to 1**.
+
+---
+
+## 1) Product Requirements
+
+### Core Concept
+
+Users can:
+
+* Browse a **music library** (mock data)
+* Create and manage **multiple playlists**
+* Add tracks to playlists
+* Reorder tracks inside a playlist
+* “Play” a track preview (UI simulation only — no real audio required)
+
+### Pages (Required)
+
+1. **Library Page**
+
+   * Track list with search + filters
+   * “Add to playlist” action per track
+2. **Playlists Page**
+
+   * List of playlists
+   * Create / rename / delete playlist
+3. **Playlist Detail Page**
+
+   * Track list in the playlist
+   * Reorder tracks (drag-and-drop OR up/down buttons)
+   * Remove track
+   * Play preview (simulated player UI)
+4. **Now Playing Drawer/Bar (Global UI)**
+
+   * Shows current track, play/pause state, progress bar (mock)
+
+---
+
+## 2) Functional Requirements
+
+### Music Library
+
+* Provide at least **40 mock tracks** with fields:
+
+  * id, title, artist, album, durationSec, coverImageUrl, genre, year
+* Must support:
+
+  * Search by title/artist
+  * Filter by genre
+  * Sort by: newest, duration, title (A–Z)
+
+### Playlists
+
+* Users can:
+
+  * Create playlist (name required, validation)
+  * Rename playlist
+  * Delete playlist (confirm dialog)
+  * Add track to a playlist (prevent duplicate tracks in a playlist)
+  * Remove track from playlist
+  * Reorder tracks in playlist
+* Display:
+
+  * Track count
+  * Total duration (sum of durationSec)
+
+### Player (Simulated)
+
+* Play/pause toggles state
+* Progress bar advances using a timer (e.g., setInterval) while “playing”
+* Next/Previous track within the **current playlist**
+* If a playlist is deleted while playing, handle gracefully (stop playback)
+
+---
+
+## 3) UI / UX Requirements
+
+* Modern, clean, music-app aesthetic
+* Responsive design (mobile + desktop)
+* Clear empty states:
+
+  * No playlists yet
+  * Playlist has no tracks
+  * Search yields no results
+* Toast or inline feedback for key actions:
+
+  * “Added to playlist”
+  * “Already in playlist”
+  * “Playlist created”
+* Basic accessibility:
+
+  * Buttons have labels
+  * Keyboard focus styles are visible
+
+---
+
+## 4) Technical Requirements
+
+### Stack
+
+* React + TypeScript
+* Build tool: **Vite** (preferred)
+* Routing: React Router
+* State management: React hooks + Context (no Redux)
+* Styling: choose ONE and be consistent:
+
+  * Tailwind CSS OR CSS Modules OR styled-components
+
+### Data
+
+* No backend.
+* Use mock data locally.
+* Persist playlists and “now playing” state to **localStorage**.
+
+### Engineering Discipline
+
+* Must use a clean folder structure like:
+
+```
+src/
+  components/
+  pages/
+  context/
+  hooks/
+  data/
+  utils/
+  types/
+  styles/
+  App.tsx
+  main.tsx
+```
+
+* Use TypeScript interfaces/types for core entities
+* No dead code, no TODO placeholders
+
+---
+
+## 5) Deliverables (Must Output All)
+
+1. **Project Overview**
+
+   * What the app does
+   * MVP scope and non-goals
+2. **Feature List**
+
+   * Core + nice-to-have future features
+3. **Page-by-page Breakdown**
+4. **Component Breakdown**
+
+   * Key components and responsibilities
+5. **Folder Structure**
+6. **Implementation**
+
+   * Provide the **actual code** for the project:
+
+     * `package.json` (scripts included)
+     * `vite` setup notes
+     * all required `src/` files
+7. **Run Instructions**
+
+   * Clear steps to install and start
+8. **Quick Manual Test Checklist**
+
+   * Steps to verify key flows
+
+---
+
+## 6) Constraints
+
+* Do NOT use a real audio API or external streaming service
+* Do NOT call real network endpoints
+* Do NOT reference or clone any existing music product branding
+* Must be runnable locally with minimal steps
