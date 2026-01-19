@@ -1,0 +1,17 @@
+.appShell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.main {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+.stack {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 20;
+}
+
+.toast {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  min-width: 220px;
+}
+
+.success {
+  border-color: rgba(16, 185, 129, 0.6);
+  background: rgba(16, 185, 129, 0.16);
+}
+
+.warning {
+  border-color: rgba(239, 68, 68, 0.6);
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.info {
+  border-color: rgba(124, 58, 237, 0.5);
+  background: rgba(124, 58, 237, 0.14);
+}
+
+@media (max-width: 640px) {
+  .stack {
+    left: 12px;
+    right: 12px;
+    bottom: 100px;
+  }
+}

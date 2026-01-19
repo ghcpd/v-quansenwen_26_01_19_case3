@@ -1,0 +1,29 @@
+.empty {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.desc {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .empty {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
